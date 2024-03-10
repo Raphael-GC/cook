@@ -9,7 +9,7 @@ export function Ingredient(){
                 source={require("@/assets/tomato.png")}
                 style={styles.image}
             />
-            <Text style={styles.title}>Tomate</Text>
+            <Text style={styles.title}>Toma</Text>
         </Pressable>
     )
 }

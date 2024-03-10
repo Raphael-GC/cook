@@ -1,7 +1,8 @@
-import { View, Text } from "react-native"
+import { View, Text, ScrollView } from "react-native"
 
 import { styles } from "./styles"
-import { Ingredients } from "@/components/Ingredients"
+
+import { Ingredient } from "@/components/Ingredient"
 
 export default function Index(){ /*When we're using Expo Router, we SHOULD set this function as a DEFAULT function*/
     return (
@@ -15,7 +16,11 @@ export default function Index(){ /*When we're using Expo Router, we SHOULD set t
                 Descubra receitas baseadas nos produtos que você escolheu.
             </Text>
 
-            <Ingredients />
+            <ScrollView contentContainerStyle={styles.ingredients}>
+                {Array.from({ length: 100 }).map((item, index) =>(
+                    <Ingredient key={index} />
+                ))}        
+            </ScrollView>
         </View>
     )
 } 
